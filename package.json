@@ -1,0 +1,20 @@
+{
+  "name": "pep-projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp/issues"
+  },
+  "homepage": "https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp#readme"
+}
