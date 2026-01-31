@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp/issues"
   },
-  "homepage": "https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp#readme"
+  "homepage": "https://github.com/Phoenix-Noah0806/Placement-Preparation-Bootcamp#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
 }

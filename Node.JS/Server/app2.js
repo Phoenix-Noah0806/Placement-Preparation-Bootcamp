@@ -40,6 +40,9 @@ const server=http.createServer((req,res)=>{
             res.end('Error reading file');
         });
 
+        readStream.on('data',(chunk)=>{
+            res.write(chunk)
+        })
         
         readStream.pipe(res);
     }
