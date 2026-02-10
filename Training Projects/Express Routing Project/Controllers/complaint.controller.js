@@ -19,7 +19,7 @@ export function newComplaints(req, res) {
     email:req.body.email,
     title: req.body.title,
     description: req.body.description,
-    status: "open",
+    status: "PENDING",
     submittedAt:new Date().toLocaleString()
   };
   complaints.push(newComplaint);

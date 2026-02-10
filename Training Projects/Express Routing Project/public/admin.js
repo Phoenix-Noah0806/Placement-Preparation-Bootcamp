@@ -17,7 +17,6 @@ async function loadComplaints() {
 
   const container = document.getElementById("complaintsContainer");
   container.innerHTML = "";
-
   let total = complaints.length;
   let pending = 0;
   let resolved = 0;
@@ -34,9 +33,8 @@ async function loadComplaints() {
 
     const div = document.createElement("div");
     div.className = "details";
-
     div.innerHTML = `
-      <div class="top">
+        <div class="top">
         <h5>ID: ${c.id}</h5>
         <button class="status">${c.status}</button>
       </div>
@@ -59,11 +57,14 @@ async function loadComplaints() {
         <p>${c.description}</p>
         <p>Submitted: ${c.submittedAt || "-"}</p>
       </div>
-    `;
-
+      <div class="status-btns">
+          <button id="pending">Set Pending</button>
+          <button id="resolve">Set Resolved</button>
+          <button id="reject">Set Rejected</button>
+        </div>
+`;
     container.appendChild(div);
   });
-
   document.querySelector("#card1 p").innerText = total;
   document.querySelector("#card2 p").innerText = pending;
   document.querySelector("#card3 p").innerText = resolved;
