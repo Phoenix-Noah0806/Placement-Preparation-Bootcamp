@@ -1,0 +1,16 @@
+FROM python:3.11
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get update && apt-get install -y gcc g++ make curl wget git
+COPY . .
+EXPOSE 5000
+
+
+# stage 2
+FROM python:3.11-slim
+WORKDIR /app
+COPY --from=builder /usr/local/lib/python3.11/site-packages/usr/local/lib/python3.11/site-packages/ .
+COPY --from=builder /app/app.py .
+EXPOSE 5000
+CMD ["python", "app.py"]
