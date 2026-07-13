@@ -9,7 +9,13 @@ const postSchema=mongoose.Schema({
     date:{
         type:Date,
         default:Date.now
-    }
+    },
+    content:String,
+    likes:[
+        {type:mongoose.Schema.Types.ObjectId,
+        ref:"User"} 
+
+    ]
 })
 const Post=mongoose.model('Post',postSchema)
 export default Post

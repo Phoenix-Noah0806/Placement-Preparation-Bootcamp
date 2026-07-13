@@ -1,8 +1,10 @@
 import mongoose from 'mongoose'
 
 const postSchema=mongoose.Schema({
+    postdata:String,
     user:{
-        type:mongoose.Schema.Types.ObjectId ,ref:"user"
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"User"
     },
     date:{
         type:Date,
@@ -10,10 +12,10 @@ const postSchema=mongoose.Schema({
     },
     content:String,
     likes:[
-        {
-            type:mongoose.Schema.Types.ObjectId,
-            ref:"user"
-        }
+        {type:mongoose.Schema.Types.ObjectId,
+        ref:"User"} 
+
     ]
 })
-export default mongoose.model('Post',postSchema)
+const Post=mongoose.model('Post',postSchema)
+export default Post
